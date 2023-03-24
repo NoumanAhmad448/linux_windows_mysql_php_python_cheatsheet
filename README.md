@@ -31,10 +31,12 @@
 ## PIP Cheatsheet 
 1. pip list 
 2. pip uninstall pkg_name
+3. pip show pkg_name
 
 ### pip create packages file
 1. pip freeze > requirements.txt
 2. pip install -r requirements.txt
 
-conda activate C:\Users\DELL\anaconda3\envs\test_conda
-install pytorch-lightning -y
+
+## Nvidia 
+1. nvidia-smi
