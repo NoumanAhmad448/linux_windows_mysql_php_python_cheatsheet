@@ -1,3 +1,16 @@
+```
+def unzip_file(file_path: str, main_folder:str):
+  """
+  require:
+  import zipfile 
+
+  file_path: the given file path 
+  main_folder: where you want to extract  
+  """
+  with zipfile.ZipFile(file_path, "r") as zip_file:
+    zip_file.extractall(main_folder)
+```
+
 An Example of using the tqdm 
 ```
 from tqdm.notebook import tqdm
