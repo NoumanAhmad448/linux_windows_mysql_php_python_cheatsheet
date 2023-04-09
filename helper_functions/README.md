@@ -1,3 +1,12 @@
+An Example of using the tqdm 
+```
+from tqdm.notebook import tqdm
+
+for no in tqdm(range(1, 50000000), desc="title"):
+  if( no == 50000000-1):
+    print(no)
+```
+
 ```
 def download_file(file_name: str, download_resource: str):
   """
