@@ -1,4 +1,10 @@
 ```
+def change_device(tensor: torch.Tensor, device="cuda"):
+  return tensor.to(device)
+```
+
+
+```
 def setup_device():
     return "cuda" if  torch.cuda.is_available() else "cpu"
 ```
