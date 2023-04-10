@@ -1,8 +1,10 @@
 ```
-def convert_to_tensor(array, is_change_dtype=False)->torch.Tensor:
+def convert_to_tensor(array, is_change_dtype=False, is_change_device=False, to_device="cpu")->torch.Tensor:
   """
-  convert numpy array to tensor
+  Convert numpy array to tensor
   is_change_dtype=True will change the dtype to float
+  
+  Require: change_dtype, change_device functions to be intialized first
   """
 
   tensor = None
@@ -12,7 +14,11 @@ def convert_to_tensor(array, is_change_dtype=False)->torch.Tensor:
      tensor = torch.from_numpy(array)
   
   if is_change_dtype: 
-    return change_dtype(tensor)
+    tensor = change_dtype(tensor)
+  
+  if is_change_device: 
+    tensor = change_device(tensor, device=to_device)
+  
   return tensor
   ```
 
