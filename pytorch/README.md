@@ -6,7 +6,7 @@ def setup_device():
 ```
 def change_dtype(tensor:torch.Tensor, dtype=torch.float):
   """
-    dtype must be type mentioned in the torch documentation
+    dtype must have the value mentioned in the torch documentation
     e.g. torch.float , torch.LongTensor
   """
   return tensor.to(dtype)
