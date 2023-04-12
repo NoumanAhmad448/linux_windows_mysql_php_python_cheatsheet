@@ -71,10 +71,15 @@ def show_image(image, label=None, cmap:str="gray",figsize:tuple = (4,4)):
     show image on the screen
     require convert_to_numpy function to be called first
   """
+def show_image(image, label=None, cmap:str="gray",figsize:tuple = (4,4), is_squeeze_not_req:bool=False):
+  """
+    show image on the screen
+    require convert_to_numpy function to be called first
+  """
   if label is None:
     label = "Image Caption"
   plt.figure(figsize=figsize)
-  plt.imshow(convert_to_numpy(image), cmap=cmap)
+  plt.imshow(convert_to_numpy(image if is_squeeze_not_req else image.squeeze()), cmap=cmap)
   plt.title(label)
   plt.axis(False)
 ```
