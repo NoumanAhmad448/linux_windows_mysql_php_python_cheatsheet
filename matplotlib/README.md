@@ -1,4 +1,28 @@
 ```
+def show_multi_images(data: torch.Tensor, figsize:tuple=(9,9), rows:int=3, cols:int=3, classes=None,
+                      cmap="gray", is_require_squeeze:bool=True):
+  """
+  classes list|dict
+  require convert_to_numpy function to be called first
+  """
+  DEFAULT_LABEL = None
+  if classes is None:
+    DEFAULT_LABEL = "Image Caption"
+  
+  figure = plt.figure(figsize=figsize)
+  cols, rows = cols, rows
+  for i in range(1, cols * rows + 1):
+      sample_idx = torch.randint(len(data), size=(1,)).item()
+      img, label = data[sample_idx]
+      figure.add_subplot(rows, cols, i)
+      plt.title(DEFAULT_LABEL if classes is None else classes[label])
+      plt.axis(False)
+      plt.imshow(convert_to_numpy(img.squeeze() if is_require_squeeze else img), cmap=cmap)
+  plt.show()
+ ```
+
+
+```
 # show the confusion matrix 
 # step 1
 # in the evaluation loop use the following
