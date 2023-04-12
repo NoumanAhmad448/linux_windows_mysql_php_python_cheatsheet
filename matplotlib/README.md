@@ -42,15 +42,15 @@ def convert_to_numpy(tensor:torch.Tensor):
     return "Something went wrong while converting tensor to numpy"
 ```
 ```
-def show_image(image, label=None):
+def show_image(image, label=None, cmap:str="gray",figsize:tuple = (4,4)):
   """
     show image on the screen
     require convert_to_numpy function to be called first
   """
   if label is None:
     label = "Image Caption"
-  plt.figure(figsize=(4,4))
-  plt.imshow(convert_to_numpy(image))
+  plt.figure(figsize=figsize)
+  plt.imshow(convert_to_numpy(image), cmap=cmap)
   plt.title(label)
   plt.axis(False)
 ```
