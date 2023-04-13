@@ -66,13 +66,17 @@ def convert_to_numpy(tensor:torch.Tensor):
     return "Something went wrong while converting tensor to numpy"
 ```
 ```
-def show_image(image, label=None, cmap:str="gray",figsize:tuple = (4,4), is_squeeze_not_req:bool=False):
+def show_image(image, label=None, cmap:str="gray",figsize:tuple = (4,4), is_squeeze_not_req:bool=False,
+               is_img_rgb:bool=False):
   """
     show image on the screen
     require convert_to_numpy function to be called first
   """
   if label is None:
     label = "Image Caption"
+  if is_img_rgb:
+    image = image.permute(1,2,0)
+  
   plt.figure(figsize=figsize)
   plt.imshow(convert_to_numpy(image if is_squeeze_not_req else image.squeeze()), cmap=cmap)
   plt.title(label)
