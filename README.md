@@ -40,3 +40,8 @@
 
 ## Nvidia 
 1. nvidia-smi
+
+## Installation from Github
+1. install mscoco python api
+```!pip install git+https://github.com/cocodataset/cocoapi.git#subdirectory=PythonAPI```
+2. 
