@@ -1,4 +1,16 @@
 ```
+null_view.match(F("uniqueness").is_null())
+null_view.match(F("uniqueness").is_array())
+null_view.match(F("uniqueness").is_number())
+
+F("uniqueness").contains([])
+F("uniqueness").contains([], all=True)#returns those samples that contain both dogs and cats
+contains_str("ze")
+
+```
+
+
+```
 dataset.list_evaluations()
 dataset.get_evaluation_info("eval")
 ```
