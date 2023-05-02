@@ -1,4 +1,19 @@
 ```
+dataset.list_evaluations()
+dataset.get_evaluation_info("eval")
+```
+
+```
+results.mAP()
+```
+
+```
+results.plot_pr_curves(classes=)
+```
+```
+result.print_report(classes=)
+```
+```
 ds.get_field_schema().keys()
 ```
 
