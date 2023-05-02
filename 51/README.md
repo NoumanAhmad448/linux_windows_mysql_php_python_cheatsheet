@@ -1,4 +1,9 @@
 ```
+ds.get_field_schema().keys()
+```
+
+
+```
 counts = dataset.count_values("ground_truth.label")
 ```
 
