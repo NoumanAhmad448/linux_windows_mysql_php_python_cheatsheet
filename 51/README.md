@@ -1,4 +1,7 @@
 ```
+dataset.select(sample_id(s))
+```
+```
 results = fob.compute_similarity(dataset, brain_key="img_sim")
 results.find_unique(100)
 vis_results = fob.compute_visualization(dataset, brain_key="img_vis")
