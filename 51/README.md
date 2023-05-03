@@ -1,4 +1,13 @@
 ```
+results = fob.compute_similarity(dataset, brain_key="img_sim")
+results.find_unique(100)
+vis_results = fob.compute_visualization(dataset, brain_key="img_vis")
+
+plot = results.visualize_unique(visualization=vis_results)
+```
+
+
+```
 dataset.list_brain_runs()
 dataset.load_brain_view(dataset.list_brain_runs()[0])
 dataset.load_brain_results("image_embeddings")
