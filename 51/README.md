@@ -1,4 +1,28 @@
 ```
+dataset.list_brain_runs()
+dataset.load_brain_view(dataset.list_brain_runs()[0])
+dataset.load_brain_results("image_embeddings")
+
+```
+```
+embeddings = dataset.compute_embeddings(model) # process takes time
+results = fob.compute_visualization( dataset,
+    embeddings=embeddings,
+    num_dims=2,
+    brain_key="image_embeddings",
+    verbose=True,
+    seed=51,)
+plot = results.visualize(
+    labels="ground_truth.label",
+    labels_title="blabblabla",
+    axis_equal=True,
+)
+plot.show(height=512)
+
+# Attach plot to session
+session_windows.plots.attach(plot)
+```
+```
 null_view.match(F("uniqueness").is_null())
 null_view.match(F("uniqueness").is_array())
 null_view.match(F("uniqueness").is_number())
