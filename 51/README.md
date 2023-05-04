@@ -1,4 +1,25 @@
 ```
+dataset_or_view.last().field_names
+
+```
+
+```
+dataset.merge_dir(
+    data_path="/path/to/images",
+    labels_path="/path/to/coco2.json",
+    dataset_type=fo.types.COCODetectionDataset,
+)
+
+```
+```
+import fiftyone.utils.random as four
+four.random_split(dataset,{"train": 0.7, "test": 0.2, "val": 0.1})
+```
+```
+datset.shuffle()
+```
+
+```
 dataset.select(sample_id(s))
 ```
 ```
