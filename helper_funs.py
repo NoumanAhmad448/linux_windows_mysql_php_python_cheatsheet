@@ -51,11 +51,19 @@ def fo_rename_field(dataset, pre_label_field,new_label_field):
 def download_file_colab(file):
   files.download(file)
 
-def export_dataset(file_name,dataset,dataset_type=fo.types.FiftyOneDataset,is_req_field=False,label_field="ground_truth"):
+def export_dataset(file_name: str,dataset,dataset_type=fo.types.FiftyOneDataset,save_file_to_drive=True,
+                   use_absolute_path: bool = False ,is_req_field:bool=False,label_field:str="ground_truth"):
+  if save_file_to_drive:
+    mount_google_drive()
+  
+  if not use_absolute_path:
+      file_name ="gdrive/MyDrive/data/"+file_name
+  
   if is_req_field:
     dataset.export(file_name, dataset_type=dataset_type,label_field=label_field)
   else:
     dataset.export(file_name, dataset_type=dataset_type)
+  
 
 def mount_google_drive(path='/content/gdrive/'):
   drive.mount(path, force_remount=True)
@@ -65,6 +73,22 @@ def upload_file_colab():
     for filename in uploaded.keys():
         print("Uploaded '%s'" % filename)
 
+def save_file_to_drive(name, path):
+  drive_service = build('drive', 'v3')
+  file_metadata = {
+      'name': name,
+      'mimeType': 'application/octet-stream'
+   }
+
+  media = MediaFileUpload(path, 
+                    mimetype='application/octet-stream',
+                    resumable=True)
+
+  created = drive_service.files().create(body=file_metadata,
+                                   media_body=media,
+                                   fields='id').execute()
+
+  print('File ID: {}'.format(created.get('id')))  
 def show_multi_images(data: torch.Tensor, figsize:tuple=(9,9), rows:int=3, cols:int=3, classes=None,
                       cmap="gray", is_require_squeeze:bool=True):
   """
