@@ -41,7 +41,7 @@ import fiftyone.brain as fob
 import eta.core.utils as etau
 from pathlib import Path
 import sys
-from google.colab import files
+from google.colab import files,drive
 import fiftyone.utils.random as four
 
 def fo_rename_field(dataset, pre_label_field,new_label_field):
