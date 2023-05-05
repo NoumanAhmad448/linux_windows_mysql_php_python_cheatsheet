@@ -1,8 +1,48 @@
 import torch 
 import numpy as np
 import matplotlib.pyplot as plt
-from google.colab import drive,files
-import fifityone as fo
+import requests
+
+from sklearn.model_selection import train_test_split
+from numpy import random
+from torch import nn
+try:
+  from torchsummary import summary
+except:
+  !pip install torchsummary
+  from torchsummary import summary
+
+try:
+  from torchmetrics import Accuracy
+except:
+  !pip install torchmetrics
+  from torchmetrics import Accuracy
+
+from torchvision.transforms import ToTensor
+from torch.utils.data import DataLoader
+
+#new 
+from torchvision import models
+from torchvision import transforms
+from torchsummary import summary
+
+try:
+  import fiftyone as fo
+except:
+  !pip install fiftyone
+  import fiftyone as fo
+import fiftyone.zoo as foz
+from fiftyone import ViewField as F
+import fiftyone.utils.coco as fouc
+from PIL import Image
+import pandas as pd
+from torchvision.transforms import functional as func
+import fiftyone.brain as fob
+import eta.core.utils as etau
+from pathlib import Path
+import sys
+from google.colab import files
+import fiftyone.utils.random as four
 
 def fo_rename_field(dataset, pre_label_field,new_label_field):
   if dataset.get_field(pre_label_field) is not None:
