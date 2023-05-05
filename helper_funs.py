@@ -6,7 +6,7 @@ import fifityone as fo
 
 def fo_rename_field(dataset, pre_label_field,new_label_field):
   if dataset.get_field(pre_label_field) is not None:
-  dataset.rename_sample_field(pre_label_field,new_label_field)
+    dataset.rename_sample_field(pre_label_field,new_label_field)
 
 def download_file_colab(file):
   files.download(file)
