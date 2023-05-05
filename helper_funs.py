@@ -1,6 +1,25 @@
 import torch 
 import numpy as np
 import matplotlib.pyplot as plt
+from google.colab import drive,files
+import fifityone as fo
+
+def download_file_colab(file):
+  files.download(file)
+
+def export_dataset(file_name,dataset,dataset_type=fo.types.FiftyOneDataset,is_req_field=False,label_field="ground_truth"):
+  if is_req_field:
+    dataset.export(file_name, dataset_type=dataset_type,label_field=label_field)
+  else:
+    dataset.export(file_name, dataset_type=dataset_type)
+
+def mount_google_drive(path='/content/gdrive/'):
+  drive.mount(path, force_remount=True)
+  
+def upload_file_colab():
+    uploaded = files.upload()
+    for filename in uploaded.keys():
+        print("Uploaded '%s'" % filename)
 
 def show_multi_images(data: torch.Tensor, figsize:tuple=(9,9), rows:int=3, cols:int=3, classes=None,
                       cmap="gray", is_require_squeeze:bool=True):
