@@ -6,18 +6,8 @@ import requests
 from sklearn.model_selection import train_test_split
 from numpy import random
 from torch import nn
-try:
-  from torchsummary import summary
-except:
-  !pip install torchsummary
-  from torchsummary import summary
-
-try:
-  from torchmetrics import Accuracy
-except:
-  !pip install torchmetrics
-  from torchmetrics import Accuracy
-
+from torchsummary import summary
+from torchmetrics import Accuracy
 from torchvision.transforms import ToTensor
 from torch.utils.data import DataLoader
 
@@ -26,11 +16,7 @@ from torchvision import models
 from torchvision import transforms
 from torchsummary import summary
 
-try:
-  import fiftyone as fo
-except:
-  !pip install fiftyone
-  import fiftyone as fo
+import fiftyone as fo
 import fiftyone.zoo as foz
 from fiftyone import ViewField as F
 import fiftyone.utils.coco as fouc
@@ -53,6 +39,14 @@ def download_file_colab(file):
 
 def export_dataset(file_name: str,dataset,dataset_type=fo.types.FiftyOneDataset,save_file_to_drive=True,
                    use_absolute_path: bool = False ,is_req_field:bool=False,label_field:str="ground_truth"):
+  """export dataset to google drive instead of local directory in FiftyOneDataset format"""
+  """
+    to store in the local pass 
+      1. use_absolute_path=True
+      2. save_file_to_drive = False
+    to store the specific field use 
+      label_field
+   """
   if save_file_to_drive:
     mount_google_drive()
   
@@ -74,6 +68,7 @@ def upload_file_colab():
         print("Uploaded '%s'" % filename)
 
 def save_file_to_drive(name, path):
+  """ this function has not been tested yet"""
   drive_service = build('drive', 'v3')
   file_metadata = {
       'name': name,
