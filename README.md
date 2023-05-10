@@ -39,7 +39,8 @@
 
 
 ## Nvidia 
-1. nvidia-smi
+1. ```!nvidia-smi```
+2. ```!nvcc --version```
 
 ## Installation from Github
 1. install mscoco python api
