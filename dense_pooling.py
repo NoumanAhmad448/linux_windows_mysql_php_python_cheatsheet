@@ -6,9 +6,6 @@ def ds_config(config) -> None:
 def eval_config(config) -> None:
     config.DENSEPOSE_EVALUATION.MESH_ALIGNMENT_MESH_NAMES = []
 
-# def densepose_head_config(config) -> None:
-#     config.MODEL.ROI_DENSEPOSE_HEAD.CSE.PIX_TO_SHAPEconfigYCLE_LOSS.TEMPERATURE_VERTEX_TO_PIXEL = 0.05
-
 def head_config(config) -> None:
     config.MODEL.DENSEPOSE_ON = True
     config.MODEL.ROI_DENSEPOSE_HEAD = CN()
