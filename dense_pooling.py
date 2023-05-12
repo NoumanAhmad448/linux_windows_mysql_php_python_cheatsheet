@@ -1,4 +1,4 @@
-from detectron2.config import configNode as CN
+from detectron2.config import CfgNode as CN
 
 def ds_config(config) -> None:
     config.DATASETS.CLASS_TO_MESH_NAME_MAPPING = CN(new_allowed=True)
