@@ -55,15 +55,7 @@ def head_config(config) -> None:
     config.INPUT.ROTATION_ANGLES = [0]
     config.TEST.AUG.ROTATION_ANGLES = ()
 
-#     densepose_head_config(config)
-
-
-def hrnet_config(config) -> None:
-    config.MODEL.HRNET.HRFPN.OUTconfigHANNELS = 256
-
 
 def dense_pooling(config) -> None:
     head_config(config)
-    hrnet_config(config)
     ds_config(config)
-    eval_config(config)
