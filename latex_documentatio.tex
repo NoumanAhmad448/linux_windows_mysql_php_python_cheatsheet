@@ -1,0 +1,127 @@
+\documentclass[twocolumn]{article}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{mfirstuc}
+\usepackage{commands}
+% \cleveref 
+% cleveref pkgs is for referance to the equcation and therorm accofrign to the label
+% \pagenumbering{arabic}
+% \pagenumbering{roman}
+\title{\capitalisewords{\textbf{lorem}} ipsum lorem ipsum|}
+\author{
+  LastName1, FirstName1\\
+  \texttt{first1.last1@xxxxx.com}
+  \and
+  LastName2, FirstName2\\
+  \texttt{first2.last2@xxxxx.com}
+  \and
+  LastName2, FirstName2\\
+  \texttt{first2.last2@xxxxx.com}
+}
+\date{May 2023}
+
+% custom functions
+\newcommand{\sumnum}[2]{
+#1,#2
+}
+
+
+\begin{document}
+\maketitle
+% skip page number from the first page
+% it must be after maktitle
+% it will mark next page 2
+\thispagestyle{empty}
+% to reset the next page 
+\clearpage
+\pagenumbering{arabic}
+
+% include file 
+\input{tables}
+% give{2}{3}
+% $\sum_{n=1}^{\infty} 2^{-n} = 1$
+% sum of 2 and 3 is $\sumnum{2}{3}$
+% \newpage
+\begin{table}
+\caption{Long table caption}
+% label must be after the caption
+\label{tble}
+\begin{center}
+\begin{tabular}{ | m{5em} | m{1cm}| m{1cm} | } 
+  \hline
+  cell1 dummy text dummy text dummy text& cell2 & cell3 \\ 
+  \hline
+  cell1 dummy text dummy text dummy text & cell5 & cell6 \\ 
+  \hline
+  cell7 & cell8 & cell9 \\ 
+  \hline
+  cell8 & cell9 & cell9 \\ 
+  \hline
+\end{tabular}
+\end{center}
+\end{table}
+this table \ref{tble} has
+
+% include images in the paper
+% \usepackage{graphicx}
+\begin{figure}[hbt!]
+\centering
+% linewidth
+\includegraphics[width=0.75\textwidth]{imgs/WeChat Image_20221231141131.jpg}
+\caption{Insert figure caption here}
+\label{fig_sim}
+\end{figure}
+this picture \ref{fig_sim}
+
+
+\begin{abstract}
+Insert abstract text here
+\end{abstract}
+
+
+\begin{align}\label{eq:another}
+\omega
+\begin{split}
+\frac{dU}{dt} &=\alpha U(t)(\gamma -U(t))-\frac{U(t-\tau)W(t)}{1+U(t-\tau)},\\
+\frac{dW}{dt} &=-W(t)+\beta\frac{U(t-\tau)W(t)}{1+U(t-\tau)}.
+\end{split}
+\end{align}
+
+% add equcation or math
+\begin{equation}
+\begin{aligned}\label{eq:first}
+\frac{\partial u(t,x)}{\partial t} = Au(t,x)
+ \left
+ (1-\frac{u(t,x)}{K}
+ \right)
+ -B\frac{u(t-\tau,x) w(t,x)}{1+Eu(t-\tau,x)},\\
+\frac{\partial w(t,x)}{\partial t} =\delta \frac{\partial^2w(t,x)}{\partial x^2}-Cw(t,x)
++D\frac{u(t-\tau,x)w(t,x)}{1+Eu(t-\tau,x)},
+\end{aligned}
+\end{equation}
+
+\section{intro}
+\subsection{Insert B head here}
+Subsection text here. Lorem ipsum 
+\citep{Bayer_etal_2013}
+dolor sit amet, consectetur adipiscing elit, 
+sed do eiusmod tempor incididunt ut labore 
+\citet{Adade_etal_2007} et dolore magna aliqua. 
+
+ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+
+\subsubsection{Insert C head here}
+
+\section{Introduction}
+% bullet point
+\begin{enumerate}
+    \item \verb|pdflatex sample|
+    \item \verb|biber sample|
+\end{enumerate}
+\noindent Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+\begin{itemize}
+    \item delete the existing \verb|\addbibresource{example.bib}|;
+    \item change the existing \verb|\printbibliography| to be 
+    \item \verb|\bibliography{example}| instead.
+\end{itemize}
+\end{document}
