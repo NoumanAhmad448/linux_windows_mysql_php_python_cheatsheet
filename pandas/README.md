@@ -7,3 +7,7 @@ index = 0
 image_name = data_pd.iloc[index, 0]
 image_label = data_pd.iloc[index, 1]
 ```
+Add new column using existed column
+```
+data['sender'] = data['message'].str.extract('From: (.+?)\n')
+```
