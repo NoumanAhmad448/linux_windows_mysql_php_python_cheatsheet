@@ -1,3 +1,7 @@
+filter data on given condition
+```
+data[data['7'] == 2]
+```
 ```
 import pandas as pd
 ```
