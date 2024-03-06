@@ -7,6 +7,10 @@ index = 0
 image_name = data_pd.iloc[index, 0]
 image_label = data_pd.iloc[index, 1]
 ```
+drop nan data
+```
+data.dropna(subset=['sender', 'recipients'], inplace=True)
+```
 Iterate for loop reterive data 
 ```
 data.iterrows()
