@@ -1,3 +1,9 @@
+choose sample from dataframe & reset the index
+```
+data.sample(n=1).reset_index(drop=True)
+```
+
+
 count repeition of an object in the same column 
 ```
 data['0.7'].value_counts()
