@@ -1,4 +1,8 @@
-filter data on given condition
+count repeition of an object in the same column 
+```
+data['0.7'].value_counts()
+```
+filter data on given condition 
 ```
 data[data['7'] == 2]
 ```
