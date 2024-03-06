@@ -1,4 +1,7 @@
 ```
+import pandas as pd
+```
+```
 data_pd = pd.read_csv("sample_data.csv")
 index = 0
 image_name = data_pd.iloc[index, 0]
