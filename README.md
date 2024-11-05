@@ -7,15 +7,36 @@
 
 ### Conda Activate/Deactivate Env
 1. Open Anaconda Powershell Prompt 
-2. Run Conda init bash
-3. conda activate env_name
-4. conda deactivate
+2. Run
+   ```
+   Conda init bash
+   ```
+4. To activate
+   ```
+   conda activate env_name
+   ```
+6. To deactivate
+   ```
+   conda deactivate
+   ```
 
 ### Conda Create Environment - CMD
-1. conda create -n yourenvname python=x.x anaconda
-2. source activate yourenvname
-3. source deactivate
-4. conda install pkg_name
+1. To create
+   ```
+   conda create -n yourenvname python=x.x anaconda
+   ```
+3. To activate
+   ```
+   source activate yourenvname
+   ```
+5. pure pip deactivate
+   ```
+   source deactivate
+   ```
+6. To install
+   ```
+   conda install pkg_name
+   ```
 
 ### Conda Create Environment - Manual
 1. Go to Anaconda Navigator and Create An Env 
@@ -26,7 +47,10 @@
 6. select your path 
 
 ### Conda change the python version 
-1. conda install python=3.10
+1. Install python in conda
+   ```
+   conda install python=3.10
+   ```
 
 ## PIP Cheatsheet 
 1. pip list 
@@ -39,8 +63,14 @@
 
 
 ## Nvidia 
-1. ```!nvidia-smi```
-2. ```!nvcc --version```
+1. Verify num of ```GPU```, their ```RAM``` , ```temp```
+   ```
+   nvidia-smi
+   ```
+3. Verify version
+   ```
+   !nvcc --version
+   ```
 
 ## Installation from Github
 1. install mscoco python api
