@@ -2,8 +2,14 @@
 
 ## Conda
 ### Enlist installed packages in the Env 
-1. conda list  
-2. conda list pkg_name
+1. listing packages
+   ```
+   conda list
+   ```
+3. To list specific pkg
+   ```
+   conda list pkg_name
+   ```
 
 ### Conda Activate/Deactivate Env
 1. Open Anaconda Powershell Prompt 
