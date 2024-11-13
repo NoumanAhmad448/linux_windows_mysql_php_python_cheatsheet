@@ -59,13 +59,28 @@
    ```
 
 ## PIP Cheatsheet 
-1. pip list 
+1. pip list
+   ```
+   pip list
+   ```
 2. pip uninstall pkg_name
+   ```
+   pip uninstall pkg_name
+   ```
 3. pip show pkg_name
+   ```
+   pip show pkg_name
+   ```
 
 ### pip create packages file
 1. pip freeze > requirements.txt
+   ```
+   pip freeze > requirements.txt
+   ```
 2. pip install -r requirements.txt
+   ```
+   pip install -r requirements.txt
+   ```
 
 
 ## Nvidia 
