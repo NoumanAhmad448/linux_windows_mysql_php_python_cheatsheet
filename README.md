@@ -1,4 +1,14 @@
-# Python Cheatsheet
+<h1 align='center' style='color: green' >Python Cheatsheet</h1>                                                                                                     
+
+## Docker
+1. Copy file(s)
+   ```
+   docker cp b4a34cd339de://app/saves/Llama-7B/lora/train_2024-11-16-12-13-34/training_loss.png D:\
+   ```
+2. show container
+   ```
+   docker ps -a
+   ```
 
 ## Conda
 ### Enlist installed packages in the Env 
