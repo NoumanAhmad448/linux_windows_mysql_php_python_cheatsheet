@@ -77,7 +77,7 @@
    ```
    pip uninstall pkg_name
    ```
-3. pip show pkg_name
+3. pip show/list 【one specific installed package detail 】
    ```
    pip show pkg_name
    ```
