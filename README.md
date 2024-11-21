@@ -1,5 +1,20 @@
 <h1 align='center' style='color: green' >Python Cheatsheet</h1>                                                                                                     
 
+## Huggingface
+1. Enable large files <br/>
+   Verify?
+   ```
+   git lfs version
+   ```
+   Install?
+   ```
+   git lfs install
+   ```
+   Enabling
+   ```
+   huggingface-cli lfs-enable-largefiles .
+   ```
+2. 
 ## Docker
 1. Copy file(s)
    ```
