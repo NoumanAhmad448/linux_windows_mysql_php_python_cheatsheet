@@ -118,6 +118,22 @@
    !nvcc --version
    ```
 
+## Git
+1. Git show commits
+   ```
+   git log --oneline
+   ```
+
+2. git rebase/merge commit before push
+   ```
+                              git reset HEAD~3
+   ```
+3. git merge after push
+   ```
+   git rebase -I HEAD~3
+   ```
+<BR/> follow the window and replace pick with ```squash``` and leave the first          ```pick``` work as it is
+
 ## Installation from Github
 1. install mscoco python api
 ```!pip install git+https://github.com/cocodataset/cocoapi.git#subdirectory=PythonAPI```
