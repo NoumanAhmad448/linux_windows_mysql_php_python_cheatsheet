@@ -126,11 +126,15 @@
 
 2. git rebase/merge commit before push
    ```
-                              git reset HEAD~3
+   git reset HEAD~3
    ```
 3. git merge after push
    ```
    git rebase -I HEAD~3
+   ```
+4. git delete all current changes before commit 
+   ```
+   git restore file_name
    ```
 <BR/> follow the window and replace pick with ```squash``` and leave the first          ```pick``` work as it is
 
