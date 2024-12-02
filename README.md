@@ -149,4 +149,9 @@ docker-compose logs -f
 ## Installation from Github
 1. install mscoco python api
 ```!pip install git+https://github.com/cocodataset/cocoapi.git#subdirectory=PythonAPI```
-2. 
+
+## Cuda
+Verify if cuda is available
+```
+python -c "import torch; print(torch.cuda.is_available())" 
+```
