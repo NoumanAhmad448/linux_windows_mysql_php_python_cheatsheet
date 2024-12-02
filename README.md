@@ -24,6 +24,11 @@
    ```
    docker ps -a
    ```
+3. building and composing docker image
+   ```
+   docker-compose build --no-cache && docker compose up -d && docker compose exec llamafactory bash
+   ```
+
 
 ## Conda
 ### Enlist installed packages in the Env 
