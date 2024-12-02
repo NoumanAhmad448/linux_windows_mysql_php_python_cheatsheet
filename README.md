@@ -28,7 +28,10 @@
    ```
    docker-compose build --no-cache && docker compose up -d --force-recreate && docker compose exec llamafactory bash
    ```
-
+4. docker-compose logs -f
+```
+docker-compose logs -f
+```
 
 ## Conda
 ### Enlist installed packages in the Env 
