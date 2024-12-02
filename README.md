@@ -155,3 +155,7 @@ Verify if cuda is available
 ```
 python -c "import torch; print(torch.cuda.is_available())" 
 ```
+
+## Resources
+1. [Python machine learning helper functions](/helper_funs.py)
+2. [Sample notebook for training](/notebook) 
