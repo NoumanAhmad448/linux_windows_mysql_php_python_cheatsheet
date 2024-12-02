@@ -26,7 +26,7 @@
    ```
 3. building and composing docker image
    ```
-   docker-compose build --no-cache && docker compose up -d && docker compose exec llamafactory bash
+   docker-compose build --no-cache && docker compose up -d --force-recreate && docker compose exec llamafactory bash
    ```
 
 
