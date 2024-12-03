@@ -42,6 +42,11 @@ systemctl start mysql
 nano /etc/my.cnf
 ```
 
+check if mysql server is running or not
+```
+ss -ae | grep mysql
+```
+
 ```
 Connect to mysql using username and password
 ```
