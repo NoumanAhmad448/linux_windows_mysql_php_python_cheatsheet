@@ -160,5 +160,6 @@ python -c "import torch; print(torch.cuda.is_available())"
 1. [Python machine learning helper functions](/helper_funs.py)
 2. [Sample notebook for training](/notebook)
 3. [Hardware Requriments for deep Learning](/hardware_requirements.md)
-3. [Use Windows specific commands](/windows_commands.md)
-3. [Use this for database like mysql configuration and troubleshooting](/databases.md)
+4. [Use Windows specific commands](/windows_commands.md)
+5. [Use this for database like mysql configuration and troubleshooting](/databases.md)
+6. [Use this for server side deployment troubleshooting installation accessing](/server_deployment_linux.md)
