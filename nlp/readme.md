@@ -1,4 +1,4 @@
-## Terminologies
+## NLP LLM Prompt Training Terminologies
 
 |    |    |    ||
 |------------|------------|------------|------------|
