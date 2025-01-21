@@ -8,7 +8,8 @@ For reference [https://scholar.google.com/citations?view_op=search_authors&hl=en
 5. label:code_generation
 6. https://scholar.google.com/citations?hl=en&view_op=search_authors&mauthors=label%3ACode_translation&btnG=
 7. label:code_debugging [not available but can be used in the future]
-8. 
+8. https://scholar.google.com/citations?hl=en&view_op=search_authors&mauthors=label:vision_language_models
+9. 
 
 ## Strategies
 1. Take a generic example(s) and show multiple model accuracies
