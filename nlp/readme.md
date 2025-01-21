@@ -16,7 +16,10 @@ For reference [https://scholar.google.com/citations?view_op=search_authors&hl=en
 3. Try to categories the work like linear loop and double loop and show their accuracies over the different models
 4. Show the  ```Levenshtein similarity``` graph over differnt input threads
 5. Show complexity over number of tokens which always increases with complexity.
-6. 
+
+## Graph Design Links Results
+1. [https://scholar.google.com/citations?hl=en&view_op=search_authors&mauthors=label%3ACode_translation&btnG=](https://scholar.google.com/citations?hl=en&view_op=search_authors&mauthors=label%3ACode_translation&btnG=)
+2. 
 
 </br>```Always keep it at the top```
 
