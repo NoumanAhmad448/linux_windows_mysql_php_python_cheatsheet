@@ -6,7 +6,18 @@ For reference [https://scholar.google.com/citations?view_op=search_authors&hl=en
 3. label:evaluation
 4. label:NLP
 5. label:code_generation
+6. https://scholar.google.com/citations?hl=en&view_op=search_authors&mauthors=label%3ACode_translation&btnG=
+7. label:code_debugging [not available but can be used in the future]
+8. 
+
+## Strategies
+1. Take a generic example(s) and show multiple model accuracies
+2. show the accuracies changes over the time frames or input
+3. Try to categories the work like linear loop and double loop and show their accuracies over the different models
+4. Show the  ```Levenshtein similarity``` graph over differnt input threads
+5. Show complexity over number of tokens which always increases with complexity.
 6. 
+
 </br>```Always keep it at the top```
 
 
