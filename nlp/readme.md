@@ -2,14 +2,14 @@
 ```Always keep it at the top``` </br>
 For reference [https://scholar.google.com/citations?view_op=search_authors&hl=en&mauthors=label:llm](https://scholar.google.com/citations?view_op=search_authors&hl=en&mauthors=label:llm)
 1. [label:language_modelling](https://scholar.google.com/citations?hl=en&view_op=search_authors&mauthors=label%3Alanguage_modelling&btnG=)
-2. label:llm_agent
-3. label:evaluation
-4. label:NLP
-5. label:code_generation
-6. https://scholar.google.com/citations?hl=en&view_op=search_authors&mauthors=label%3ACode_translation&btnG=
+2. [https://scholar.google.com/citations?hl=en&view_op=search_authors&mauthors=label%3Allm_agent&btnG=](label:llm_agent)
+3. [https://scholar.google.com/citations?hl=en&view_op=search_authors&mauthors=label%3Aevaluation&btnG=](label:evaluation)
+4. [https://scholar.google.com/citations?hl=en&view_op=search_authors&mauthors=label:nlp](label:NLP)
+5. [https://scholar.google.com/citations?hl=en&view_op=search_authors&mauthors=label%3Acode_generation&btnG=](label:code_generation)
+6. [https://scholar.google.com/citations?hl=en&view_op=search_authors&mauthors=label%3ACode_translation&btnG=](https://scholar.google.com/citations?hl=en&view_op=search_authors&mauthors=label%3ACode_translation&btnG=)
 7. label:code_debugging [not available but can be used in the future]
-8. https://scholar.google.com/citations?hl=en&view_op=search_authors&mauthors=label:vision_language_models
-9. https://scholar.google.com/citations?hl=en&view_op=search_authors&mauthors=label%3AAdversarial_Attacks&btnG=
+8. [https://scholar.google.com/citations?hl=en&view_op=search_authors&mauthors=label:vision_language_models](https://scholar.google.com/citations?hl=en&view_op=search_authors&mauthors=label:vision_language_models)
+9. [https://scholar.google.com/citations?hl=en&view_op=search_authors&mauthors=label%3AAdversarial_Attacks&btnG=](https://scholar.google.com/citations?hl=en&view_op=search_authors&mauthors=label%3AAdversarial_Attacks&btnG=)
 10. 
 
 ## Strategies
