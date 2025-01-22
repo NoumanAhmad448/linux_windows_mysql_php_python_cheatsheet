@@ -10,7 +10,9 @@ For reference [https://scholar.google.com/citations?view_op=search_authors&hl=en
 7. label:code_debugging [not available but can be used in the future]
 8. [https://scholar.google.com/citations?hl=en&view_op=search_authors&mauthors=label:vision_language_models](https://scholar.google.com/citations?hl=en&view_op=search_authors&mauthors=label:vision_language_models)
 9. [https://scholar.google.com/citations?hl=en&view_op=search_authors&mauthors=label%3AAdversarial_Attacks&btnG=](https://scholar.google.com/citations?hl=en&view_op=search_authors&mauthors=label%3AAdversarial_Attacks&btnG=)
-10. 
+10. [https://scholar.google.com/citations?view_op=search_authors&hl=en&mauthors=label:llm](https://scholar.google.com/citations?view_op=search_authors&hl=en&mauthors=label:llm)
+11. [https://scholar.google.com/citations?hl=en&view_op=search_authors&mauthors=label:llms](https://scholar.google.com/citations?hl=en&view_op=search_authors&mauthors=label:llms)
+12. 
 
 ## Strategies
 1. Take a generic example(s) and show multiple model accuracies
