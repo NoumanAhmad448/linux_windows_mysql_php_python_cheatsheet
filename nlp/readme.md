@@ -9,7 +9,8 @@ For reference [https://scholar.google.com/citations?view_op=search_authors&hl=en
 6. https://scholar.google.com/citations?hl=en&view_op=search_authors&mauthors=label%3ACode_translation&btnG=
 7. label:code_debugging [not available but can be used in the future]
 8. https://scholar.google.com/citations?hl=en&view_op=search_authors&mauthors=label:vision_language_models
-9. 
+9. https://scholar.google.com/citations?hl=en&view_op=search_authors&mauthors=label%3AAdversarial_Attacks&btnG=
+10. 
 
 ## Strategies
 1. Take a generic example(s) and show multiple model accuracies
