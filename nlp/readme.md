@@ -115,4 +115,5 @@ https://www.kaggle.com/code/mfaaris/content-based-and-tensorflow-recommender-sys
 - Use cprint of termcolor package instead python build in print
 - Add a log file called error.log which include the only latest error message and delete all previous messages
 - Bring always dynamic appraoch much diverse with API request handling etc
+- Follow all rules when you save the file. A file must be runnable in any operating system
   
