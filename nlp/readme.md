@@ -109,3 +109,10 @@ https://github.com/soliverc/Enron-Ham-Spam-Email-FIlter/blob/master/Enron%20HamS
 https://github.com/RutujChheda/Enron_Emails_Dataset_Processed/blob/main/Enron_Data_Normalization.ipynb
 https://www.kaggle.com/code/lakshmi25npathi/sentiment-analysis-of-imdb-movie-reviews/notebook
 https://www.kaggle.com/code/mfaaris/content-based-and-tensorflow-recommender-system/notebook
+
+## Basic Requirement for every prompt
+- Always put the variables in env file
+- Use cprint of termcolor package instead python build in print
+- Add a log file called error.log which include the only latest error message and delete all previous messages
+- Bring always dynamic appraoch much diverse with API request handling etc
+  
