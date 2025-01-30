@@ -117,3 +117,28 @@ https://www.kaggle.com/code/mfaaris/content-based-and-tensorflow-recommender-sys
 - Bring always dynamic appraoch much diverse with API request handling etc
 - Follow all rules when you save the file. A file must be runnable in any operating system
   
+## All Research Papers
+### Top Papers
+- https://scholar.google.com/scholar?hl=en&as_sdt=0%2C5&q=Llama%3A+Open+and+efficient+foundation+language+models&btnG=
+- https://scholar.google.com/scholar?hl=en&as_sdt=0%2C34&q=The+llama+3+herd+of+models&btnG=
+- https://scholar.google.com/scholar?hl=en&as_sdt=0%2C34&q=Code+llama%3A+Open+foundation+models+for+code&btnG=
+- https://scholar.google.com/scholar?hl=en&as_sdt=0%2C5&q=Pixtral+12B&btnG=
+- https://scholar.google.com/scholar?hl=en&as_sdt=0%2C5&q=Qwen2.+5+Technical+Report&btnG=
+- 
+
+### 2025
+- https://scholar.google.com/scholar?hl=en&as_sdt=0%2C34&q=odeElo%3A+Benchmarking+Competition-level+Code+Generation+of+LLMs+with+Human-comparable+Elo+Ratings&btnG=
+- https://scholar.google.com/scholar?hl=en&as_sdt=0%2C34&q=ExecRepoBench%3A+Multi-level+Executable+Code+Completion+Evaluation&btnG=
+- 
+### 2024
+- https://scholar.google.com/scholar?hl=en&as_sdt=0%2C34&q=Testgeneval%3A+A+real+world+unit+test+generation+and+test+completion+benchmark&btnG=
+- https://scholar.google.com/scholar?hl=en&as_sdt=0%2C34&q=Cruxeval%3A+A+benchmark+for+code+reasoning%2C+understanding+and+execution&btnG=
+- https://scholar.google.com/scholar?hl=en&as_sdt=0%2C34&q=A+framework+for+evaluating+tool+support+for+co-evolution+of+modeling+languages%2C+tools+and+models&btnG=
+- https://scholar.google.com/scholar?hl=en&as_sdt=0%2C34&q=Evaluating+and+aligning+codellms+on+human+preference&btnG=
+- 
+
+### 2023
+- [Self-taught optimizer (stop): Recursively self-improving code generation](https://scholar.google.com/scholar?hl=en&as_sdt=0%2C34&q=Self-taught+optimizer+%28stop%29%3A+Recursively+self-improving+code+generation&btnG=)
+
+### 2022
+- https://scholar.google.com/scholar?hl=en&as_sdt=0%2C34&q=Docprompting%3A+Generating+code+by+retrieving+the+docs&btnG=
