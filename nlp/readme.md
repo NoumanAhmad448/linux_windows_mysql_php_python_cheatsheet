@@ -124,6 +124,10 @@ https://www.kaggle.com/code/mfaaris/content-based-and-tensorflow-recommender-sys
 - https://scholar.google.com/scholar?hl=en&as_sdt=0%2C34&q=Code+llama%3A+Open+foundation+models+for+code&btnG=
 - https://scholar.google.com/scholar?hl=en&as_sdt=0%2C5&q=Pixtral+12B&btnG=
 - https://scholar.google.com/scholar?hl=en&as_sdt=0%2C5&q=Qwen2.+5+Technical+Report&btnG=
+
+## Top Benchmarks
+- https://github.com/openai/human-eval
+- https://github.com/microsoft/CodeXGLUE
 - 
 
 ### 2025
