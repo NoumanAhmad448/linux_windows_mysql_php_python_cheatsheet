@@ -131,11 +131,11 @@ https://www.kaggle.com/code/mfaaris/content-based-and-tensorflow-recommender-sys
 - 
 
 ### 2025
-- https://scholar.google.com/scholar?hl=en&as_sdt=0%2C34&q=odeElo%3A+Benchmarking+Competition-level+Code+Generation+of+LLMs+with+Human-comparable+Elo+Ratings&btnG=
-- https://scholar.google.com/scholar?hl=en&as_sdt=0%2C34&q=ExecRepoBench%3A+Multi-level+Executable+Code+Completion+Evaluation&btnG=
+- https://scholar.google.com/scholar?hl=en&as_sdt=0%2C34&q=odeElo%3A+Benchmarking+Competition-level+Code+Generation+of+LLMs+with+Human-comparable+Elo+Ratings&btnG= ✔
+- https://scholar.google.com/scholar?hl=en&as_sdt=0%2C34&q=ExecRepoBench%3A+Multi-level+Executable+Code+Completion+Evaluation&btnG= ✔
 - 
 ### 2024
-- https://scholar.google.com/scholar?hl=en&as_sdt=0%2C34&q=Testgeneval%3A+A+real+world+unit+test+generation+and+test+completion+benchmark&btnG=
+- https://scholar.google.com/scholar?hl=en&as_sdt=0%2C34&q=Testgeneval%3A+A+real+world+unit+test+generation+and+test+completion+benchmark&btnG= ✔
 - https://scholar.google.com/scholar?hl=en&as_sdt=0%2C34&q=Cruxeval%3A+A+benchmark+for+code+reasoning%2C+understanding+and+execution&btnG=
 - https://scholar.google.com/scholar?hl=en&as_sdt=0%2C34&q=A+framework+for+evaluating+tool+support+for+co-evolution+of+modeling+languages%2C+tools+and+models&btnG=
 - https://scholar.google.com/scholar?hl=en&as_sdt=0%2C34&q=Evaluating+and+aligning+codellms+on+human+preference&btnG=
