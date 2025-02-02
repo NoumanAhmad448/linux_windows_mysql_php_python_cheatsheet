@@ -119,6 +119,9 @@ https://www.kaggle.com/code/mfaaris/content-based-and-tensorflow-recommender-sys
   
 ## All Research Papers
 ### Top Papers
+#### 2025
+- https://scholar.google.com/scholar?hl=en&as_sdt=0%2C5&q=deepseek+R1&btnG=#d=gs_cit&t=1738509542273&u=%2Fscholar%3Fq%3Dinfo%3AwoY857wPRSIJ%3Ascholar.google.com%2F%26output%3Dcite%26scirp%3D0%26hl%3Den
+- 
 #### 2024
 - https://scholar.google.com/scholar?hl=en&as_sdt=0%2C5&q=Llama%3A+Open+and+efficient+foundation+language+models&btnG=
 - https://scholar.google.com/scholar?hl=en&as_sdt=0%2C34&q=The+llama+3+herd+of+models&btnG=
