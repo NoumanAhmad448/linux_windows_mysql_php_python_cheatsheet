@@ -119,12 +119,16 @@ https://www.kaggle.com/code/mfaaris/content-based-and-tensorflow-recommender-sys
   
 ## All Research Papers
 ### Top Papers
+#### 2024
 - https://scholar.google.com/scholar?hl=en&as_sdt=0%2C5&q=Llama%3A+Open+and+efficient+foundation+language+models&btnG=
 - https://scholar.google.com/scholar?hl=en&as_sdt=0%2C34&q=The+llama+3+herd+of+models&btnG=
 - https://scholar.google.com/scholar?hl=en&as_sdt=0%2C34&q=Code+llama%3A+Open+foundation+models+for+code&btnG=
 - https://scholar.google.com/scholar?hl=en&as_sdt=0%2C5&q=Pixtral+12B&btnG=
 - https://scholar.google.com/scholar?hl=en&as_sdt=0%2C5&q=Qwen2.+5+Technical+Report&btnG=
-
+#### 2023
+- https://scholar.google.com/scholar?hl=en&as_sdt=0%2C5&q=mistral&btnG=
+- https://scholar.google.com/scholar?hl=en&as_sdt=0%2C5&q=gpt4+openai&btnG=&oq=gpt4
+  
 ## Top Benchmarks
 - https://github.com/openai/human-eval
 - https://github.com/microsoft/CodeXGLUE
