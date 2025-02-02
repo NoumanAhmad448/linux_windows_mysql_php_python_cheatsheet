@@ -145,6 +145,10 @@ docker-compose logs -f
    git restore file_name
    ```
 <BR/> follow the window and replace pick with ```squash``` and leave the first          ```pick``` work as it is
+5. Git stop file tracking 
+```
+git rm -r --cached file_name
+```
 
 ## Installation from Github
 1. install mscoco python api
