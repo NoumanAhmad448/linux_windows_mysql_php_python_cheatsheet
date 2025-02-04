@@ -136,6 +136,8 @@ https://www.kaggle.com/code/mfaaris/content-based-and-tensorflow-recommender-sys
 - https://github.com/openai/human-eval
 - https://github.com/microsoft/CodeXGLUE
 - 
+## Machine Intelligence Research
+- https://scholar.google.com/scholar?hl=en&as_sdt=0%2C5&q=Prompting+Large+Language+Models+for++Automatic+Question+Tagging&btnG=
 
 ### 2025
 - https://scholar.google.com/scholar?hl=en&as_sdt=0%2C34&q=odeElo%3A+Benchmarking+Competition-level+Code+Generation+of+LLMs+with+Human-comparable+Elo+Ratings&btnG= ✔
