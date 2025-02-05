@@ -170,3 +170,4 @@ python -c "import torch; print(torch.cuda.is_available())"
 6. [Use this for server side deployment troubleshooting installation accessing](/server_deployment_linux.md)
 7. [Use this for nlp llm technical terminologies for review purpose](/nlp/readme.md)
 8. [Use this University Information](/university_info.md)
+9. [Django Deployment using python buildin env ](https://github.com/NoumanAhmad448/django-blog-posts/blob/master/.github/workflows/deployment.yml)
