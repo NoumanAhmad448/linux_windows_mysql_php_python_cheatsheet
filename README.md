@@ -140,11 +140,12 @@ docker-compose logs -f
    ```
    git rebase -I HEAD~3
    ```
+<BR/> follow the window and replace pick with ```squash``` and leave the first          ```pick``` work as it is
+
 4. git delete all current changes before commit 
    ```
    git restore file_name
    ```
-<BR/> follow the window and replace pick with ```squash``` and leave the first          ```pick``` work as it is
 5. Git stop file tracking 
 ```
 git rm -r --cached file_name
