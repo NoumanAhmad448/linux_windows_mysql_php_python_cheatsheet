@@ -53,10 +53,7 @@ mysql connection
 ```
 mysql -h 127.0.0.1 -P 3306 -u usmansaleem234_lyskills_root5 -p
 ```
-password
-```
-BurraqLyskillsEngineering65$
-```
+
 
 mysql configuration
 ```
