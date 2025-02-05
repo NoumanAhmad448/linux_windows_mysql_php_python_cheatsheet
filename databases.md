@@ -47,7 +47,7 @@ check if mysql server is running or not
 ss -ae | grep mysql
 ```
 
-```
+
 Connect to mysql using username and password
 ```
 mysql -h 203.161.43.113 -P 3306 -u user_name -p
