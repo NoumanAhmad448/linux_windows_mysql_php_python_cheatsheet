@@ -66,8 +66,11 @@ For reference [https://scholar.google.com/citations?view_op=search_authors&hl=en
 
 
 # Terminologies
+```
 Large langauge models,NLP,code generation,LLM benchmarks,Eval benchmarks,Code Summarization,
-In-Context Learning
+In-Context Learning, Python code generationNatural language processingLarge language modelsLow-cost modelsChain-of-thought prompting
+Code auto-completionTransformersLanguage modelingSOAWeb serviceCode mining
+```
 
 ## Companies
 - Hugging face
