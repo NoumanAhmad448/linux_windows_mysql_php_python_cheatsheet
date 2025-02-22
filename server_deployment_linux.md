@@ -133,4 +133,272 @@ Before starting, ensure you have the following:
    ```
 2. **Test Website**: Open your web browser and navigate to your domain to ensure it loads correctly.
 
+# Troubleshooting Documentation
+
+This section provides detailed troubleshooting steps for common issues encountered during development and deployment. Each subsection focuses on a specific area, such as Apache, MySQL, PHP, and more.
+
+---
+
+## Apache Troubleshooting
+
+### 1. **Check Apache Status**
+To check if Apache is running:
+```bash
+systemctl status httpd
+```
+
+### 2. **Restart Apache**
+If Apache is not running or needs a restart:
+```bash
+systemctl restart httpd
+```
+
+### 3. **Validate Apache Configuration**
+Check for syntax errors in the Apache configuration file:
+```bash
+apachectl configtest
+```
+
+### 4. **Locate Apache Configuration File**
+Find the path to the Apache configuration file:
+```bash
+apachectl -V | grep SERVER_CONFIG_FILE
+```
+
+### 5. **Edit Apache Configuration**
+Edit the Apache configuration file:
+```bash
+nano /etc/httpd/conf/httpd.conf
+```
+
+### 6. **Common Errors**
+- **Port Conflict**: Ensure no other service is using port 80 or 443.
+- **Permission Issues**: Check file permissions for the web root directory.
+- **Module Errors**: Ensure required modules (e.g., `mod_rewrite`) are enabled.
+
+---
+
+## MySQL Troubleshooting
+
+### 1. **Check MySQL Status**
+To check if MySQL is running:
+```bash
+systemctl status mysql
+```
+
+### 2. **Restart MySQL**
+If MySQL is not running or needs a restart:
+```bash
+systemctl restart mysql
+```
+
+### 3. **Locate MySQL Configuration File**
+Find the path to the MySQL configuration file:
+```bash
+mysql --verbose --help | grep "Default options"
+```
+
+### 4. **Edit MySQL Configuration**
+Edit the MySQL configuration file:
+```bash
+nano /etc/my.cnf
+```
+
+### 5. **Check MySQL Logs**
+Find and check MySQL error logs:
+```bash
+my_print_defaults --mysqld | grep log-error
+```
+Or:
+```bash
+nano /var/lib/mysql/hostname.err
+```
+
+### 6. **Common Errors**
+- **Connection Issues**: Verify MySQL credentials in `.env`.
+- **Permission Issues**: Ensure the MySQL user has proper permissions.
+- **Corrupted Tables**: Run `mysqlcheck` to repair corrupted tables.
+
+---
+
+## PHP Troubleshooting
+
+### 1. **Check PHP Version**
+To check the installed PHP version:
+```bash
+php -v
+```
+
+### 2. **Locate PHP Configuration File**
+Find the path to the PHP configuration file:
+```bash
+php --ini
+```
+
+### 3. **Edit PHP Configuration**
+Edit the PHP configuration file:
+```bash
+nano /etc/php.ini
+```
+
+### 4. **Common Errors**
+- **File Upload Issues**: Increase `upload_max_filesize` and `post_max_size` in `php.ini`.
+- **Memory Limit**: Increase `memory_limit` in `php.ini`.
+- **Extensions Missing**: Enable required extensions (e.g., `curl`, `pdo_mysql`).
+
+---
+
+## Laravel Troubleshooting
+
+### 1. **Clear Laravel Cache**
+Clear configuration and application cache:
+```bash
+php artisan config:clear
+php artisan cache:clear
+```
+
+### 2. **Check Laravel Logs**
+View Laravel logs for errors:
+```bash
+nano storage/logs/laravel.log
+```
+
+### 3. **Common Errors**
+- **Environment File**: Ensure `.env` is correctly configured.
+- **Permissions**: Set proper permissions for `storage` and `bootstrap/cache`.
+- **Database Migrations**: Run `php artisan migrate` to apply database changes.
+
+---
+
+## Node.js Troubleshooting
+
+### 1. **Check Node.js Version**
+To check the installed Node.js version:
+```bash
+node -v
+```
+
+### 2. **Install Dependencies**
+Install Node.js dependencies:
+```bash
+npm install
+```
+
+### 3. **Run Development Server**
+Start the development server:
+```bash
+npm run watch
+```
+
+### 4. **Common Errors**
+- **Version Mismatch**: Ensure the correct Node.js version is installed.
+- **Missing Modules**: Reinstall dependencies using `npm install`.
+
+---
+
+## Git and GitHub Troubleshooting
+
+### 1. **Check Git Status**
+To check the current Git status:
+```bash
+git status
+```
+
+### 2. **Pull Latest Changes**
+Pull the latest changes from the remote repository:
+```bash
+git pull origin main
+```
+
+### 3. **Resolve Merge Conflicts**
+If there are merge conflicts, resolve them manually and commit:
+```bash
+git add .
+git commit -m "Resolved merge conflicts"
+```
+
+### 4. **Common Errors**
+- **Authentication Issues**: Ensure SSH keys are correctly configured.
+- **Branch Issues**: Verify you are on the correct branch.
+
+---
+
+## File Permissions Troubleshooting
+
+### 1. **Change File Ownership**
+Change the owner of a file or directory:
+```bash
+chown user_name:group_name file_or_directory
+```
+
+### 2. **Change File Permissions**
+Change file permissions:
+```bash
+chmod 755 file_or_directory
+```
+
+### 3. **Common Errors**
+- **Permission Denied**: Ensure the user has proper permissions.
+- **Read-Only Filesystem**: Remount the filesystem with write permissions.
+
+---
+
+## Server Logs Troubleshooting
+
+### 1. **Check Apache Logs**
+View Apache error logs:
+```bash
+nano /var/log/httpd/error_log
+```
+
+### 2. **Check MySQL Logs**
+View MySQL error logs:
+```bash
+nano /var/lib/mysql/hostname.err
+```
+
+### 3. **Check Laravel Logs**
+View Laravel logs:
+```bash
+nano storage/logs/laravel.log
+```
+
+---
+
+## Cloudflare Troubleshooting
+
+### 1. **Check DNS Settings**
+Ensure DNS records are correctly configured in Cloudflare.
+
+### 2. **Clear Cloudflare Cache**
+Clear the Cloudflare cache to reflect changes:
+1. Log in to Cloudflare.
+2. Navigate to **Caching** > **Configuration** > **Purge Cache**.
+
+### 3. **Common Errors**
+- **SSL Issues**: Ensure SSL is properly configured in Cloudflare.
+- **DNS Propagation**: Wait for DNS changes to propagate.
+
+---
+
+## General Troubleshooting Tips
+
+### 1. **Check Disk Space**
+Check available disk space:
+```bash
+df -h
+```
+
+### 2. **Check Memory Usage**
+Check memory usage:
+```bash
+free -m
+```
+
+### 3. **Check Running Processes**
+View running processes:
+```bash
+top
+```
+
 
