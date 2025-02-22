@@ -1,106 +1,186 @@
-## SSH access
-Read the public key from ```git bash```
-```
-cat ~/.ssh/id_rsa.pub
-```
-Create a ```config``` file in ```.ssh``` folder and add the following lines
-```
-Host ip_addr
-   HostName ip_addr
-   PreferredAuthentications publickey
-   IdentityFile ~/.ssh/id_rsa.pub
-```
-ssh access command
-```
-ssh usr@ip
+### Step 1: Gather Necessary Information
+Before starting, ensure you have the following:
+- Domain name registered with Namecheap.
+- Hosting account details (IP address, SSH access credentials, etc.).
+- Access to the hosting control panel or SSH access to the server.
+
+### Step 2: Update Domain DNS Settings on Namecheap
+1. **Log in to Namecheap**: Access your Namecheap account.
+2. **Navigate to Domain List**: Click on "Domain List" from the left sidebar.
+3. **Select Your Domain**: Click on the "Manage" button next to your domain.
+4. **Update DNS Settings**:
+   - Find the "Nameservers" section.
+   - Choose "Custom DNS" and enter the nameservers provided by your hosting provider.
+   - Save changes.
+
+### Step 3: Connect to Hosting via SSH
+1. **Generate SSH Key** (if not already done):
+   ```bash
+   ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+   ```
+2. **Copy Public Key**:
+   ```bash
+   cat ~/.ssh/id_rsa.pub
+   ```
+3. **Configure SSH**:
+   - Create a `config` file in the `.ssh` directory:
+     ```bash
+     nano ~/.ssh/config
+     ```
+   - Add the following lines:
+     ```plaintext
+     Host ip_addr
+        HostName ip_addr
+        PreferredAuthentications publickey
+        IdentityFile ~/.ssh/id_rsa.pub
+     ```
+4. **SSH Access**:
+   ```bash
+   ssh usr@ip
+   ```
+
+### Step 4: Configure Web Server (Apache)
+1. **Check Apache Status**:
+   ```bash
+   systemctl status httpd
+   ```
+2. **Validate Apache Configuration**:
+   ```bash
+   apachectl configtest
+   ```
+3. **Edit Apache Configuration**:
+   ```bash
+   nano /etc/httpd/conf/httpd.conf
+   ```
+4. **Restart Apache**:
+   ```bash
+   systemctl restart httpd
+   ```
+
+### Step 5: Database Configuration (MySQL)
+1. **Connect to MySQL**:
+   ```bash
+   mysql -h 127.0.0.1 -P 3306 -u your_db_user -p
+   ```
+2. **Check Data Directory**:
+   ```bash
+   mysql -u your_db_user -p -e 'SHOW VARIABLES WHERE Variable_Name LIKE "%dir"'
+   ```
+3. **Restart MySQL**:
+   ```bash
+   systemctl restart mysql
+   ```
+
+### Step 6: File Permissions and Ownership
+1. **Change Group Ownership**:
+   ```bash
+   chgrp user_name file/folder
+   ```
+2. **Change User Ownership**:
+   ```bash
+   chown user_name file/folder
+   ```
+3. **Change Permissions**:
+   ```bash
+   chmod 755 file/folder
+   ```
+
+### Step 7: Verify Domain Connection
+1. **Check Hostname**:
+   ```bash
+   hostname
+   ```
+2. **Test Website**: Open your web browser and navigate to your domain to ensure it loads correctly.
+
+### Markdown File Content
+Here is the content formatted for a Markdown file (`namecheap_hosting_setup.md`):
+
+```markdown
+# Namecheap Hosting Setup Guide
+
+## Step 1: Update Domain DNS Settings on Namecheap
+1. Log in to Namecheap.
+2. Navigate to "Domain List".
+3. Select your domain and click "Manage".
+4. Update the "Nameservers" section with your hosting provider's nameservers.
+
+## Step 2: Connect to Hosting via SSH
+1. Generate SSH Key:
+   ```bash
+   ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+   ```
+2. Copy Public Key:
+   ```bash
+   cat ~/.ssh/id_rsa.pub
+   ```
+3. Configure SSH:
+   ```bash
+   nano ~/.ssh/config
+   ```
+   Add:
+   ```plaintext
+   Host ip_addr
+      HostName ip_addr
+      PreferredAuthentications publickey
+      IdentityFile ~/.ssh/id_rsa.pub
+   ```
+4. SSH Access:
+   ```bash
+   ssh usr@ip
+   ```
+
+## Step 3: Configure Web Server (Apache)
+1. Check Apache Status:
+   ```bash
+   systemctl status httpd
+   ```
+2. Validate Apache Configuration:
+   ```bash
+   apachectl configtest
+   ```
+3. Edit Apache Configuration:
+   ```bash
+   nano /etc/httpd/conf/httpd.conf
+   ```
+4. Restart Apache:
+   ```bash
+   systemctl restart httpd
+   ```
+
+## Step 4: Database Configuration (MySQL)
+1. Connect to MySQL:
+   ```bash
+   mysql -h 127.0.0.1 -P 3306 -u your_db_user -p
+   ```
+2. Check Data Directory:
+   ```bash
+   mysql -u your_db_user -p -e 'SHOW VARIABLES WHERE Variable_Name LIKE "%dir"'
+   ```
+3. Restart MySQL:
+   ```bash
+   systemctl restart mysql
+   ```
+
+## Step 5: File Permissions and Ownership
+1. Change Group Ownership:
+   ```bash
+   chgrp user_name file/folder
+   ```
+2. Change User Ownership:
+   ```bash
+   chown user_name file/folder
+   ```
+3. Change Permissions:
+   ```bash
+   chmod 755 file/folder
+   ```
+
+## Step 6: Verify Domain Connection
+1. Check Hostname:
+   ```bash
+   hostname
+   ```
+2. Test Website: Open your domain in a web browser.
 ```
 
-## Linux (ubuntu | centos)
-create symbolink/link/shortcut in differnt folder
-*PS: * bash is original path, /bin/sh is target path
-```
-sudo ln -sf bash /bin/sh
-```
-delete multiple lines in nano
-```
-use CTRL+Shift+6 to mark the beginning of your block
-move cursor with arrow keys to end of your block, the text will be highlighted.
-use CTRL+K to cut/delete block.
-```
-
-hostname finder
-```
-hostname
-```
-value
-```
-server1.lyskills.com
-```
-datadir finder
-```
-mysql -uusmansaleem234_lyskills_root5 -p -e 'SHOW VARIABLES WHERE Variable_Name LIKE "%dir"'
-```
-OR login to mysql and run the following
-```
-select @@datadir;
-```
-OR
-```
-mysqld --verbose --help | grep ^datadir
-```
-
-mysql connection
-```
-mysql -h 127.0.0.1 -P 3306 -u usmansaleem234_lyskills_root5 -p
-```
-
-
-mysql configuration
-```
-systemctl daemon-reload && systemctl restart mysql
-```
-```
-systemctl status mysql
-```
-or
-
-```
-journalctl -xe
-```
-```
-systemctl start mysql
-```
-
-```
-nano /etc/my.cnf
-```
-change group ownership/permission
-```
-chgrp user_name file/folder
-```
-change user ownership/permission
-```
-chown user_name file/folder
-```
-change permission
-```
-chmod 666/777/+rwx/-rwx/+rw/-rw/ file/folder
-```
-
-## Apache server
-1. apache status
-```
- systemctl status httpd
-```
-apache configuration file validation command
-```
-apachectl configtest
-```
-```
-nano conf/httpd.conf
-```
-
-apache configration command
-```
-apachectl -V | grep SERVER_CONFIG_FILE
-```
+This guide provides a comprehensive walkthrough for connecting a domain with hosting, specifically tailored for Namecheap, and includes all necessary commands and procedures.
