@@ -90,6 +90,41 @@ Before starting, ensure you have the following:
    ```bash
    chmod 755 file/folder
    ```
+### Verify the Actual Domain Path Using Domain List in cPanel
+
+#### **1. Access cPanel**
+1. Log in to **Namecheap** and access **cPanel**.
+
+#### **2. Use the Domain List Option**
+1. In cPanel, search for the **Domains** section.
+2. Click on **Domains** or **Domain List**.
+3. You will see a list of all domains (primary, addon, and subdomains).
+4. Check the **Document Root** column for each domain to see the actual file path. Example:
+   - Primary domain: `/home/username/public_html`
+   - Addon domain: `/home/username/public_html/addondomain.com`
+   - Subdomain: `/home/username/public_html/subdomain.yourdomain.com`
+
+### **2. Configure FTP Account**
+1. In cPanel, search for the **FTP Accounts** tool.
+2. Under **Add FTP Account**:
+   - Enter a username (e.g., `yourdomain_user`).
+   - Enter a strong password.
+   - Set the directory to the domain's root path (e.g., `/home/username/public_html`).
+3. Click **Create FTP Account**.
+4. Use the provided FTP credentials (username, password, and server address) to connect via an FTP client like FileZilla.
+
+#### **3. Connect via FTP Client**
+1. Open your FTP client (e.g., FileZilla).
+2. Enter the following details:
+   - **Host**: `yourdomain.com` or the server IP.
+   - **Username**: `yourdomain_user` (full FTP username, e.g., `yourdomain_user@yourdomain.com`).
+   - **Password**: The password you set.
+   - **Port**: `21` (default FTP port).
+3. Click **Quickconnect** to access your domain's files.
+
+#### **4. Verify Access**
+- Once connected, you should see the files in the directory you specified (e.g., `public_html`).
+
 
 ### Step 7: Verify Domain Connection
 1. **Check Hostname**:
