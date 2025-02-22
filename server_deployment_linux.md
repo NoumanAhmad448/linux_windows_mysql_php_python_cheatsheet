@@ -38,7 +38,13 @@ Before starting, ensure you have the following:
    ```bash
    ssh usr@ip
    ```
-
+#### Troubleshooting
+- access your server via VNC
+- open the /etc/ssh/sshd_config file for editing
+- make sure the "PermitRootLogin" parameter is set to "Yes"
+- save and exit the file
+- run the following command: systemctl restart sshd
+  
 ### Step 4: Configure Web Server (Apache)
 1. **Check Apache Status**:
    ```bash
