@@ -268,6 +268,112 @@ nano storage/logs/laravel.log
 - **Permissions**: Set proper permissions for `storage` and `bootstrap/cache`.
 - **Database Migrations**: Run `php artisan migrate` to apply database changes.
 
+### Troubleshooting: Files Being Downloaded Instead of Executed
+
+If files are being downloaded from the website instead of being executed, it typically indicates that PHP is not running or Apache/Nginx is not properly configured. Follow these steps to resolve the issue:
+
+1. **Check `.htaccess` Files**  
+   Ensure the `.htaccess` files in both the **root** and **public** folders are correctly configured.
+
+   - **Root `.htaccess`**:
+     ```apache
+     <IfModule mod_rewrite.c>
+         RewriteEngine On
+         RewriteRule ^(.*)$ public/$1 [L]
+     </IfModule>
+     ```
+
+   - **Public `.htaccess`**:
+     ```apache
+     <IfModule mod_rewrite.c>
+         RewriteEngine On
+         RewriteCond %{REQUEST_FILENAME} !-d
+         RewriteCond %{REQUEST_FILENAME} !-f
+         RewriteRule ^ index.php [L]
+     </IfModule>
+     ```
+
+2. **Verify Apache Configuration**  
+   Ensure Apache is properly configured to handle PHP files and that the `AllowOverride` directive is set to `All` in your Apache configuration file.
+
+   - Open your Apache configuration file:
+     ```bash
+     sudo nano /etc/apache2/sites-available/yourdomain.conf
+     ```
+   - Ensure the following settings are present:
+     ```apache
+     <Directory /path/to/your/laravel/project/public>
+         AllowOverride All
+         Require all granted
+     </Directory>
+     ```
+   - Enable `mod_rewrite` if it is not already enabled:
+     ```bash
+     sudo a2enmod rewrite
+     sudo systemctl restart apache2
+     ```
+
+3. **Verify Nginx Configuration (if applicable)**  
+   If you are using Nginx, ensure the configuration file is correctly set up to handle PHP files.
+
+   - Open your Nginx configuration file:
+     ```bash
+     sudo nano /etc/nginx/sites-available/yourdomain
+     ```
+   - Ensure the following settings are present:
+     ```nginx
+     server {
+         listen 80;
+         server_name yourdomain.com;
+         root /path/to/your/laravel/project/public;
+
+         index index.php index.html index.htm;
+
+         location / {
+             try_files $uri $uri/ /index.php?$query_string;
+         }
+
+         location ~ \.php$ {
+             include snippets/fastcgi-php.conf;
+             fastcgi_pass unix:/var/run/php/php8.1-fpm.sock; # Adjust PHP version if needed
+             fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+             include fastcgi_params;
+         }
+
+         location ~ /\.ht {
+             deny all;
+         }
+     }
+     ```
+   - Test the Nginx configuration and restart the server:
+     ```bash
+     sudo nginx -t
+     sudo systemctl restart nginx
+     ```
+
+4. **Verify PHP is Running**  
+   Ensure PHP is installed and running on your server. You can test this by creating a `phpinfo.php` file in the `public` directory:
+   ```php
+   <?php
+   phpinfo();
+   ```
+   Access `http://yourdomain.com/phpinfo.php` in your browser. If PHP is running, you will see the PHP information page. Delete this file after testing for security reasons.
+
+5. **Check File Permissions**  
+   Ensure the correct file permissions are set for the Laravel project:
+   ```bash
+   # Set directory permissions to 755
+   find /path/to/your/laravel/project -type d -exec chmod 755 {} \;
+
+   # Set file permissions to 644
+   find /path/to/your/laravel/project -type f -exec chmod 644 {} \;
+
+   # Set permissions for storage and bootstrap/cache
+   chmod -R 775 /path/to/your/laravel/project/storage
+   chmod -R 775 /path/to/your/laravel/project/bootstrap/cache
+   ```
+
+
 ---
 
 ## Node.js Troubleshooting
