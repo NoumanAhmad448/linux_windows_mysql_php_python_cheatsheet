@@ -172,3 +172,4 @@ python -c "import torch; print(torch.cuda.is_available())"
 8. [Use this University Information](/university_info.md)
 9. [Django Deployment using python buildin env ](https://github.com/NoumanAhmad448/django-blog-posts/blob/master/.github/workflows/deployment.yml)
 10. [Django Deployment using uwsgi](https://github.com/NoumanAhmad448/django-blog-posts/blob/master/deployment_using_uwsgi.md)
+11. [Laravel Deployment With Livewire](/laravel_deploymment.md)
